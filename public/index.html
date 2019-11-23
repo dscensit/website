@@ -1,1 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#f6f6f6"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+  
+  <title>DSC - ENSIT</title>
+  
+  <meta name="author" content="BOKOVE Ezekias"/>
+  <meta name="title" content="DSC ENSIT">
+  <meta name="keywords" content="dsc,dsc ensit, developer student clubs, ensit ci, DSC sub saharan africa, communauté d'étudiant, communauté google côte d'ivoire, sciences informatiques abidjan, bokove ezekias,"/>
+  <meta name="description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT.">
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DSC ENSIT | Developer Student Club ENSIT" />
+  <meta property="og:description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT." />
+  <meta property="og:url" content="https://dsc-ensit.web.app" />
+  <meta property="og:site_name" content="DSC ENSIT" />
+  <meta property="og:image" content="https://dsc-ensit.web.app/images/dsc.png" />
+  <meta property="og:image:secure_url" content="https://dsc-ensit.web.app/images/dsc.png" />
+  <meta property="og:image:width" content="567" />
+  <meta property="og:image:height" content="567" />
+    <!-- Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dsc-ensit.web.app" />
+  <meta property="og:title" content="DSC ENSIT" />
+  <meta property="og:description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT." />
+  <meta property="og:image" content="https://dsc-ensit.web.app/images/dsc.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="DSC Icon" />
+    <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://dsc-ensit.web.app" />
+  <meta name="twitter:site" content="@DscEnsit" />
+  <meta name="twitter:creator" content="@EzekiasBokove" />
+  <meta name="twitter:title" content="DSC ENSIT | Developer Student Club ENSIT" />
+  <meta name="twitter:description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT." />
+  <meta name="twitter:image:src" content="https://dsc-ensit.web.app/images/dsc.png" />
+  <meta name="twitter:image:alt" content="DSC Icon" />
 
+  <meta name="google-site-verification" content="BEDcsLZQlqB3FkjmyyoExR__hnNqwv8UVFpjlB3ia-I" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147241121-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147241121-1');
+  </script>
+  <!-- Schema.org meta for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "DSC ENSIT (Developer Student Club ENSIT)",
+      "description": "Le DSC ENSIT est un groupe communautaire universitaire pour les étudiants de tous les programmes souhaitant être développeurs web et mobile. En rejoignant un DSC, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. ",
+      "image": "https://dsc-ensit.web.app/images/dsc.png",
+      "logo": "https://dsc-ensit.web.app/images/favicon.ico",
+      "url": "https://dsc-ensit.web.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abidjan",
+        "addressCountry": "Côte d'Ivoire"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abidjan",
+        "addressCountry": "Côte d'Ivoire",
+        "addressRegion": "Région des Lagunes",
+        "streetAddress": "Cocody, Abidjan"
+      },
+      "email": "ricardobokove@gmail.com",
+      "image": "https://dsc-ensit.web.app/images/assets/team/bokove_ezekias.jpg",
+      "jobTitle": "Cloud Engineering with GCP",
+      "name": "BOKOVE Ezekias",
+      "description": "I am GDG Bassam co-lead, DSC ENSIT Lead, Google Cloud Study Jams organizer and trainer. I have many certificates of specializations: Cloud Engineering with GCP, Architecting with Google Compute Engine and architecture with Google Kubernetes Engine on coursera. Being pationed by technology, my goal is to share my knowledge and contribute to improving the living conditions of the population through new technologies. My favorite technology is cloud computing.",
+      "telephone": "+225 41 45 94 26",
+      "url": [
+        "https://www.linkedin.com/in/ez%C3%A9kias-bokove/",
+        "https://dsc-ensit.web.app/"
+      ]
+    }
+  </script>
+  <link rel="canonical" href="https://dsc-ensit.web.app/"/>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/assets/pwa/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/assets/pwa/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/assets/pwa/favicon-16x16.png">
+  <link rel="mask-icon" href="images/assets/pwa/safari-pinned-tab.svg" color="#f8f6f8">
+  
+  <link href="images/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="images/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="dns-prefetch" href="https://docs.google.com" />
+  <link href='https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Material+Icons' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="x-hidden has-sticky-header">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+  <nav class="navbar navbar-expand-lg fixed-top custom-menu custom-menu__light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img data-src="images/DSC_ENSIT_Logo-long.png" height="40" alt="DSC icon">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="menu-icon__circle"></span>
+        <span class="menu-icon">
+          <span class="menu-icon__bar"></span>
+          <span class="menu-icon__bar"></span>
+          <span class="menu-icon__bar"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item active"><a class="nav-link" href="#overview">Accueil <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a href="#technologies" class="nav-link">Technologies</a></li>
+          <li class="nav-item"><a href="pages/learn.html" class="nav-link">Apprendre</a></li>
+          <li class="nav-item"><a href="#workshops" class="nav-link">Ateliers</a></li>
+          <li class="nav-item"><a href="#team" class="nav-link">Équipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://developers.google.com/community/dsc/stories/" target="_blank" rel="noopener" aria-label="DSC Histoires">Histoires</a></li>
+        </ul>
+        <div class="custom-menu__right">
+          <a href="https://forms.gle/DF23EFa1YARTgKbT8" class="event-btn" target="_blank" rel="noopener" aria-label="Formulaire d'adhésion"><i class="fa fa-users"></i> Devenir membre</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header id="hero" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-6">
+          <div class="hero-content">
+            <div class="hero-title__group">
+              <div class="hero-title">
+                <h2 class="zuri">Developer Student Club<br> ENSIT.</h2>
+              </div>
+              <div class="Hero--Subtitle">
+                <p class="lead">Developer Student Clubs est un programme présenté par
+                  <first-letter>G</first-letter><third-letter>o</third-letter><second-letter>o</second-letter><first-letter>g</first-letter><forth-letter>l</forth-letter><third-letter>e</third-letter> Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs.<first-letter> Développement web</first-letter> et <third-letter>mobile</third-letter> , <second-letter>Cloud</second-letter> et <forth-letter>compétences en leadership.</forth-letter>
+                </p>
+              </div>
+            </div>
+            <a href="https://forms.gle/DF23EFa1YARTgKbT8" class="event-btn" target="_blank" rel="noopener" aria-label="Formulaire d'adhésion"><i class="fa fa-users"></i> Devenir membre</a>
+            <div id="memberSubmit" class="h3 text-center hidden"></div>
+            <div id="loader">
+              <img data-src="images/loading.gif" height="30">
+              <div class="spinner-grow spinner-grow-md"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 ml-auto ml-pic">
+          <div class="hero-figure">
+            <img data-src="images/assets/diversity.png" class="img-fluid w-100" alt="Illustration of diversity in our developer community">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="overview" class="section-spacer bg-very__gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <div class="feature-card  bg-very__white">
+            <div class="feature-card__body">
+              <i class="fas fa-rocket ghost-blue"></i>
+              <h4 class="feature-title">Concept de DSC</h4>
+              <p class="text-justify">Le programme DSC est un canal de base qui permet à Google d’offrir aux étudiants des compétences en développement, des compétences en développement mobile et Web, en vue de leur permettre d’obtenir de l’employabilité.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="feature-card  bg-very__white">
+            <div class="feature-card__body">
+              <i class="fas fa-lightbulb ghost-green"></i>
+              <h4 class="feature-title">Pourquoi DSC?</h4>
+              <p class="text-justify">Pour que les étudiants acquièrent des compétences en web, mobile, leadership, résolvent des problèmes grâce à la technologie et les incitent à devenir des développeurs et des acteurs du changement de classe mondiale.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="feature-card mb-0  bg-very__white">
+            <div class="feature-card__body">
+              <i class="fas fa-users ghost-red"></i>
+              <h4 class="feature-title">Public cible</h4>
+              <p class="text-justify">Les activités du DSC sont destinées aux étudiants de l’Université et à d’autres, y compris aux membres du corps enseignant qui souhaitent acquérir des compétences. Objectif: résoudre les problèmes de la vie réelle avec la technologie.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opportunities" class="section-spacer section-opp bg-very__white">
+    <div class="container">
+      <header class="section-header text-center">
+        <h2 class="section-title-custom">Les opportunités qu'offrent le DSC aux étudiants</h2>
+      </header>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li> ◾&nbsp; Développer leurs connaissances sur les technologies de développement et plus encore grâce à des ateliers et des évents entre pairs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li> ◾&nbsp; Acquérir une expérience pertinente du secteur en résolvant les problèmes des organisations locales avec des solutions technologiques.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li> ◾&nbsp;Présentez leurs prototypes et leurs solutions à la communauté locale et aux leaders de l'industrie.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li> ◾&nbsp; Obtenir l'inspiration pour devenir des développeurs et des acteurs de changement de classe mondiale en partageant les réussites d'autres personnes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies" class="section-spacer bg-very__gray">
+    <div class="container">
+      <header class="section-header text-center">
+        <h2 class="section-title">Des technologies qui nous passionnent</h2>
+        <p class="section-subtitle">Possibilités d'apprendre et d'accéder à du contenu technique approfondi.</p>
+        <br>
+      </header>
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <div class="feature-list-image">
+            <img data-src="images/assets/technologies/android.png" class="img-fluid" alt="Logo officiel Android" width="100%" height="50%">
+          </div>
+        </div>
+        <div class="col-sm-5 ml-auto">
+          <div class="feature-list-wrapper">
+            <div class="content-header">
+              <h2 class="content-title">Développement Android</h2>
+              <p>Chaque année, les développeurs Google publient de nouvelles mises à jour passionnantes du système d'exploitation le plus populaire au monde. Nous avons toujours des sessions pour vous tenir au courant et maîtriser les dernières tendances du développement Android moderne.</p>
+            </div>
+            <a href="https://codelabs.developers.google.com/?cat=Android" class="hero-button" target="_blank" rel="noreferrer" aria-label="Codlabs Android">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-spacer">
+    <div class="container">
+      <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
+        <div class="col-sm-5 mr-auto">
+          <div class="feature-list-wrapper">
+            <div class="content-header">
+              <h2 class="content-title">Développement web</h2>
+              <p>Découvrez les fondements d'une expérience Web agréable pour l'utilisateur et le développeur. Restez à l'affût des technologies émergentes et tendances. Accédez à une expérience de codage guidé, tutoriel et pratique.</p>
+            </div>
+            <a href="https://codelabs.developers.google.com/?cat=Web" class="hero-button" target="_blank" rel="noreferrer" aria-label="Codlabs Web">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="feature-list-image">
+            <img data-src="images/assets/technologies/web.png" alt="Développeur créant une application Web progressive" class="img-fluid" height="60%" width="90%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="hip" class="section-spacer bg-very__gray">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <div class="feature-list-image">
+            <img data-src="images/assets/technologies/cloud.png" class="img-fluid" alt="Illustration du téléchargement de données dans le nuage" width="90%">
+          </div>
+        </div>
+        <div class="col-sm-5 ml-auto">
+          <div class="feature-list-wrapper">
+            <div class="content-header">
+              <h2 class="content-title">Cloud computing</h2>
+              <p>Pour les développeurs passionnés qui souhaitent rester pertinents dans un monde d'abord cloud où les entreprises exigent agilité et innovation et développent rapidement les applications natives du cloud afin de combler les écarts entre données, visibilité et action.</p>
+            </div>
+            <a href="https://codelabs.developers.google.com/?cat=Cloud"  class="hero-button" target="_blank" rel="noreferrer" aria-label="Codlabs Cloud">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-spacer">
+    <div class="container">
+      <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
+        <div class="col-sm-5 mr-auto">
+          <div class="feature-list-wrapper">
+            <div class="content-header">
+              <h2 class="content-title">Machine Learning / IA</h2>
+              <p>Apprenez à susciter l'engagement et la rétention des utilisateurs avec des applications intelligentes capables de fournir efficacement aux utilisateurs ce dont ils ont besoin en toute simplicité en offrant à ces systèmes la possibilité d'apprendre et d'améliorer de façon absolue leurs expériences sans être explicitement programmé.
+              </p>
+            </div>
+            <a href="https://codelabs.developers.google.com/?cat=TensorFlow"  class="hero-button" target="_blank" rel="noreferrer" aria-label="Codlabs TensorFlow">Codelabs &nbsp; &nbsp;<i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="feature-list-image">
+            <img data-src="images/assets/technologies/mi.png" class="img-fluid" alt="Illustration robotique de combien de choses différentes il peut faire" height="60%" width="90%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workshops" class="section-spacer workshops-section bg-very__gray">
+    <div class="container">
+      <header class="section-header text-center">
+        <h2 class="section-title">Événements & Ateliers</h2>
+        <p class="section-subtitle">Venez apprendre, partager et communiquer avec nous en personne.</p>
+      </header>
+      <div class="workshops-type-switch">
+        <ul class="nav nav-pills justify-content-center js-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#upcoming">Evènements à venir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#past">Événements passés</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane active" id="upcoming" role="tabpanel" aria-labelledby="upcoming">
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <div class="card event-card">
+                <img class="card-img-top" data-src="images/assets/events/DSC_ENSIT_Sessions_d'information.png" alt="DSC ENSIT Sessions d'information">
+                <div class="card-body">
+                  <p class="tagging expert float-right">Important</p>
+                  <h5 class="card-title">Sessions d'information</h5>
+                  <table>
+                    <tr>
+                      <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                      <td>Sam<sup>11</sup> Septembre 2019</td>
+                    </tr>
+                    <tr>
+                      <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
+                      <td>Hangouts</td>
+                    </tr>
+                    <tr>
+                      <td class="text-green"><i class="far fa-clock"></i></td>
+                      <td>17H30</td>
+                    </tr>
+                  </table>
+                  <a href="https://forms.gle/DF23EFa1YARTgKbT8" class="button float-right" target="_blank" rel="noopener" aria-label="Assister">Assister</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card event-card">
+                <img class="card-img-top" data-src="images/assets/events/DevFestCIV19.jpg" alt="DEVFEST CI 19 GDG Côte d'Ivoire">
+                <div class="card-body">
+                  <p class="tagging intermediate float-right">Important</p>
+                  <h5 class="card-title">DEVFEST CI 19</h5>
+                  <table>
+                    <tr>
+                      <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                      <td>Ven<sup>11</sup> Octobre 2019</td>
+                    </tr>
+                    <tr>
+                      <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
+                      <td>Inconnu</td>
+                    </tr>
+                    <tr>
+                      <td class="text-green"><i class="far fa-clock"></i></td>
+                      <td>09h à 17h</td>
+                    </tr>
+                  </table>
+                  <a href="https://www.meetup.com/fr-FR/GDG-Cocody/events/262670508/" class="button float-right" target="_blank" rel="noopener" aria-label="Inscription">Assister</a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-4 col-12">
+              <div class="card event-card">
+                <img class="card-img-top" data-src="images/assets/events/rpj.png" alt="Event three poster">
+                <div class="card-body">
+                  <p class="tagging beginner float-right">Beginner</p>
+                  <h5 class="card-title">Raspberry Pi Jam</h5>
+                  <table>
+                    <tr>
+                      <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                      <td>22<sup>nd</sup> May 2019</td>
+                    </tr>
+                    <tr>
+                      <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
+                      <td>LH 20, Main Campus</td>
+                    </tr>
+                    <tr>
+                      <td class="text-green"><i class="far fa-clock"></i></td>
+                      <td>1800hrs - 1930hrs</td>
+                    </tr>
+                  </table>
+                  <a href="https://www.meetup.com/GDG-Kisii/events/258212444/" class="button float-right">Attend</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="tab-pane" id="past" role="tabpanel" aria-labelledby="past">
+          <section id="hi" class="section-spacer bg-very__gray">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-sm-6">
+                  <div class="feature-list-image">
+                    <img class="card-img-top" data-src="images/assets/events/ioextended19_civ.jpg" alt="ioextended19 GDG Cocody & GDG Bassam">
+                  </div>
+                </div>
+                <div class="col-sm-5 ml-auto">
+                  <div class="feature-list-wrapper">
+                    <div class="content-header">
+                      <h2 class="content-title">ioextended19 GDG Cocody & GDG Bassam</h2>
+                      <hr>
+                      <h6>HEURE : 09:00 à 17:00</h6>
+                      <h6>LIEU : SIMPLON - Université de Cocody</h6>
+                      <p>Nous avons appris comment déployer une application severless sur Google Cloud Platform, comment utiliser TensorFlow 2.0, concevoir une application mobile avec Kotlin et Flutter.</p>
+                    </div>
+                    <a href="https://www.meetup.com/fr-FR/GDG-Cocody/events/260246058/" class="past-event" target="_blank" rel="noopener" aria-label="PHOTOS Events">PHOTOS&nbsp;&nbsp;<i class="fas fa-camera"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-spacer">
+            <div class="container">
+              <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
+                <div class="col-sm-5 mr-auto">
+                  <div class="feature-list-wrapper">
+                    <div class="content-header">
+                      <h2 class="content-title">DSC SSA Leads Summit</h2>
+                      <hr>
+                      <h6>DATE : Me<sup>25</sup> Juillet - Sa<sup>28</sup>Juillet 2018</h6>
+                      <h6>LIEU : Lagos, Nigeria.</h6>
+                      <p>L'un de nos principaux organisateurs a eu le privilège de représenter la communauté lors d'un sommet organisé par Google Nigeria, où il a également parlé de la fixation d'objectifs.</p>
+                    </div>
+                    <a href="https://developers.google.com/community/dsc/stories/" class="past-event" target="_blank" rel="noopener" aria-label="DSC Histoires">Histoires&nbsp;&nbsp;<i class="fas fa-camera"></i></a>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="feature-list-image">
+                    <iframe width="500" height="274" data-urllink="https://www.youtube.com/embed/AAin71VkbzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section-spacer team-section">
+    <div  class="container">
+      <header class="text-center section-header">
+        <h2 class="section-title">L'équipe du DSC ENSIT</h2>
+        <p class="section-subtitle">Des étudiants et des membres du corps professoral passionnés sont la clé du succès du programme.</p>
+      </header>
+      <div class="container-fluid">
+        <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox" aria-labelledby="carouselExample" tabindex="-1" 	aria-activedescendant="carouselExample">
+            <div class="carousel-item active col-md-4 col-15" role="option">
+              <div class="card event-card">
+                <div class="card hovercard">
+                  <div class="cardheader"></div>
+                  <div class="avatar">
+                    <img data-src="images/assets/team/bokove_ezekias.jpg" alt="BOKOVE Ezekias DSC Lead en Côte d'Ivoire">
+                  </div>
+                  <div class="info">
+                    <div class="title">
+                      <h5>BOKOVE Ezekias</h5>
+                      <p>Lead</p>
+                    </div>
+                    <div class="desc">Ingénieur Google Cloud Platform</div>
+                    <div class="desc">Architecture avec Google Compute Engine</div>
+                    <div class="desc">Architecture avec Google Kubernetes Engine</div>
+                  </div>
+                  <div class="bottom">
+                    <ul class="social-list__inline mt-10">
+                      <li>
+                        <a href="https://twitter.com/EzekiasBokove" target="_blank" rel="noopener" aria-label=" twitter de BOKOVE Ezekias DSC Lead civ">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="github de BOKOVE Ezekias">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/ez%C3%A9kias-bokove/" target="_blank" rel="noopener" aria-label="linkedin de BOKOVE Ezekias DSC Lead civ">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4 col-15" role="option">
+              <div class="card event-card">
+                <div class="card hovercard">
+                  <div class="cardheader"></div>
+                  <div class="avatar">
+                      <img data-src="images/assets/team/Armel_Yara.jpg" alt="Armel Yara DSC mentor civ">
+                  </div>
+                  <div class="info">
+                    <div class="title">
+                      <h5>Armel YARA</h5>
+                      <p>Mentor</p>
+                    </div>
+                    <div class="desc">Développeur mobile et Web</div>
+                    <div class="desc">Passionné d'Open Source (TensorFlow)</div>
+                    <div class="desc">Google Cloud Platform</div>
+                  </div>
+                  <div class="bottom">
+                    <ul class="social-list__inline mt-10">
+                      <li>
+                        <a href="https://twitter.com/ArmelYara" target="_blank" rel="noopener" aria-label="twitter ArmelYara">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/armel-yara-3757b4105" target="_blank" rel="noopener" aria-label="linkedin armel-yara">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4 col-15" role="option">
+              <div class="card event-card">
+                <div class="card hovercard">
+                  <div class="cardheader"></div>
+                  <div class="avatar">
+                    <img data-src="images/assets/team/avatar.png" alt="co-organizer avatar">
+                  </div>
+                  <div class="info">
+                    <div class="title">
+                      <h5>Loading...</h5>
+                      <p>Co-Lead</p>
+                    </div>
+                    <div class="desc">Développeur mobile et Web</div>
+                    <div class="desc">Passionné d'Open Source</div>
+                    <div class="desc">Mentor communautaire</div>
+                  </div>
+                  <div class="bottom">
+                    <ul class="social-list__inline mt-10">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4 col-15" role="option">
+              <div class="card event-card">
+                <div class="card hovercard">
+                  <div class="cardheader"></div>
+                  <div class="avatar">
+                    <img data-src="images/assets/team/avatar.png" alt="co-organizer avatar">
+                  </div>
+                  <div class="info">
+                    <div class="title">
+                      <h5>Loading...</h5>
+                      <p>Co-lead</p>
+                    </div>
+                    <div class="desc">Développeur mobile et Web</div>
+                    <div class="desc">Passionné d'Open Source</div>
+                    <div class="desc">Mentor communautaire</div>
+                  </div>
+                  <div class="bottom">
+                    <ul class="social-list__inline mt-10">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener" aria-label="">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev" style="cursor:default;">
+            <span class="carousel-control-prev-i fas fa-angle-left" aria-hidden="true" style="cursor:pointer;"></span>
+            <span class="sr-only">Précédent</span>
+          </a>
+          <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next" style="cursor:default;">
+            <span class="carousel-control-next-i fas fa-angle-right" aria-hidden="true" style="cursor:pointer;"></span>
+            <span class="sr-only">Suivant</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faqs" class="section-spacer section-faq bg-very__gray">
+    <div class="container">
+      <header class="section-header text-center">
+        <h2 class="section-title">Questions fréquemment posées</h2>
+      </header>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Qui peut devenir membre?</h5>
+              <p>Les clubs sont ouverts à tous les étudiants quelque soit leur filière. Aux développeurs novices, débutants ou avancés qui souhaitent approfondir leurs compétences. Les passionnés de technologie sont également les bienvenus</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">À quelle fréquence les événements et les ateliers ont-ils lieu?</h5>
+              <p>Nous avons des sessions pratiques les samedis. Nous organisons également des ateliers et nous vous recommandons de rejoindre notre communauté sur <a href="#">Meetup</a> pour être informé de nos différentes activités.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Que dois-je avoir lorsque je participe à un atelier?</h5>
+              <p>Nous vous recommandons d'avoir à votre portée un cahier, un stylo et un ordinateur portable car, le plus souvent, nous salissons les mains avec du code. Surtout, ayez une bonne dose de curiosité et d’enthousiasme.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">À qui devrais-je m'adresser si j'ai des questions?</h5>
+              <p>Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter en cliquant sur le bouton ci-dessous. Nous serons dévoués à rester joignables par courrier électronique même après l'événement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-40 text-center">
+        <a href="mailto:dscensit@gmail.com" class="hero-button" aria-label="mail">Envoyez-nous un e-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section-spacer footer-section">
+    <div class="container">
+      <div class="row flex-column-reverse flex-sm-row flex-lg-row">
+        <div class="col-md-4 col-12">
+          <div class="footer-widget first-of-footer-widget">
+            <img data-src="images/DSC_ENSIT_Logo.png" class="logo-sm mb-10 mt-0" alt="DSC ENSIT footer logo">
+            <p class="mt-0">&copy; 2019 | Tous droits réservés.</p>
+            <span>N'hésitez pas à nous envoyer un email: </span>
+            <a href="mailto:dscensit@gmail.com">dscensit@gmail.com</a>
+            <ul class="social-list__inline mt-10">
+              <li>
+                <a href="https://twitter.com/DscEnsit" target="_blank" rel="noopener" aria-label="page twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener" aria-label="page github">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/GoogleDevelopers"target="_blank" rel="noopener" aria-label="page youtube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-10">
+          <div class="row">
+            <div class="col-md-4 col-6">
+              <div class="footer-widget">
+                <h4 class="footer-widget__title">Programmes</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://www.womentechmakers.com/" target="_blank" rel="noreferrer" aria-label="Women Techmakers">Women Techmakers</a>
+                  </li>
+                  <li>
+                    <a href="https://developers.google.com/experts/" target="_blank" rel="noreferrer" aria-label="Google Developer Experts">Google Developer Experts</a>
+                  </li>
+                  <li>
+                    <a href="https://developers.google.com/programs/community/" target="_blank" rel="noreferrer" aria-label="Google Developer Groups">Google Developer Groups</a>
+                  </li>
+                  <li>
+                    <a href="https://developers.google.com/community/launchpad/" target="_blank" rel="noreferrer" aria-label="Launchpad">Launchpad</a>
+                  </li>
+                  <li>
+                    <a href="https://developers.google.com/community/dsc/" target="_blank" rel="noreferrer" aria-label="Developer Student Clubs">Developer Student Clubs</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-6">
+              <div class="footer-widget">
+                <h4 class="footer-widget__title">Développeurs</h4>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="https://developer.chrome.com/home" target="_blank" rel="noreferrer" aria-label="Chrome">Chrome</a>
+                    </li>
+                    <li>
+                      <a href="https://developer.android.com/index.html" target="_blank" rel="noreferrer" aria-label="Android">Android</a>
+                    </li>
+                    <li>
+                      <a href="https://firebase.google.com/" target="_blank" rel="noreferrer" aria-label="Firebase">Firebase</a>
+                    </li>
+                    <li>
+                      <a href="https://cloud.google.com/" target="_blank" rel="noreferrer" aria-label="Google Cloud Platform">Google Cloud Platform</a>
+                    </li>
+                    <li>
+                      <a href="https://developers.google.com/actions/" target="_blank" rel="noreferrer" aria-label="Actions on Google">Actions on Google</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer-widget">
+                <h4 class="footer-widget__title">Contribuer</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://github.com/DSCEksu/dsceksu/issues/new?template=documentation-bug.md" target="_blank" rel="noreferrer" aria-label="Déposer un bug">Déposer un bug</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/DSCEksu/dsceksu" target="_blank" rel="noreferrer" aria-label="Voir la source">Voir la source</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" onclick="share('DSC ENSIT', 'https://dsc-ensit.web.app', 'En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement de travaille harmonieux entre pairs et développent des solutions pour les entreprises locales et leur communauté.')"><i class="fa fa-share"></i> Partager</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" id="scroll" style="display: none;"><i class="fas fa-angle-up"></i></a>
+
+  <script>
+    ;function imageIntersectionObserverCallback(imageEntries, observer) {
+      imageEntries.forEach(imgEntry => {
+        if (imgEntry.isIntersecting) {
+          imgEntry.target.setAttribute('src', imgEntry.target.dataset.src);
+          observer.unobserve(imgEntry.target);
+        }
+      })
+    }
+    const imageObserver = new IntersectionObserver(imageIntersectionObserverCallback, { rootMargin: '30px 0px' });
+    imageObserver.POLL_INTERVAL = 200;
+    imageObserver.USE_MUTATION_OBSERVER = false;
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    })
+  </script>
+  <script>
+    function iframeObserverCallback(iframeEntries, observer) {
+      iframeEntries.forEach(iframe => {
+        if (iframe.isIntersecting && window.matchMedia('(min-width: 450px)').matches) {
+          iframe.target.setAttribute('src', iframe.target.dataset.urllink);
+          observer.unobserve(iframe.target);
+        }
+      })
+    }
+    const iframeObserver = new IntersectionObserver(iframeObserverCallback, { rootMargin: '30px 0px' });
+    iframeObserver.POLL_INTERVAL = 200;
+    iframeObserver.USE_MUTATION_OBSERVER = false;
+    document.querySelectorAll('iframe[data-urllink]').forEach(img => {
+      iframeObserver.observe(img);
+    });
+
+    async function share(title, url, text) {
+      if (window.Windows) {
+        const DataTransferManager = window.Windows.ApplicationModel.DataTransfer.DataTransferManager;
+
+        const dataTransferManager = DataTransferManager.getForCurrentView();
+        dataTransferManager.addEventListener("datarequested", (ev) => {
+          const data = ev.request.data;
+
+          data.properties.title = title;
+          data.properties.url = url;
+          data.setText(text);
+        });
+
+        DataTransferManager.showShareUI();
+
+        return true;
+      } else if (navigator.share) {
+        try {
+          await navigator.share({
+            title: title,
+            url: url,
+            text: text,
+          });
+
+          return true;
+        } catch (err) {
+          console.error('There was an error trying to share this content');
+          return false;
+        }
+      }
+    }
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log(`Service Worker registered! Scope: ${registration.scope}`);
+          })
+          .catch(err => {
+            console.log(`Service Worker registration failed: ${err}`);
+          });
+      });
+    }
+  </script>
+  <script src="js/vendors/pace.js"></script>
+  <script src="js/vendors/jquery.min.js"></script>
+  <script src="js/vendors/owl.carousel.min.js"></script>  
+  <script src="js/vendors/bootstrap.bundle.min.js"></script>
+  <script src="js/vendors/jquery.magnific-popup.min.js"></script>
+  <script src="js/vendors/jquery.easing.min.js"></script>
+  <script src="js/vendors/hammer.js"></script>
+  <script src="js/vendors/swiper.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/member.js"></script>
+</body>
+</html>
