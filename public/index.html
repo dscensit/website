@@ -2,10 +2,10 @@
 <html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
-  <link rel="manifest" href="manifest.json"/>
+  <link rel="manifest" href="manifest.webmanifest"/>
   <meta name="theme-color" content="#f6f6f6"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
   
   <title>DSC - ENSIT</title>
   
@@ -121,14 +121,28 @@
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body class="x-hidden has-sticky-header">
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/6.5.0/firebase-app.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#reserved-urls -->
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAfkXB1I7l5HfcJ4qz2Gj21-myxE2cB4ck",
+    authDomain: "dsc-ensit.firebaseapp.com",
+    databaseURL: "https://dsc-ensit.firebaseio.com",
+    projectId: "dsc-ensit",
+    messagingSenderId: "95530495026",
+    appId: "1:95530495026:web:205da347f31a70b5",
+    measurementId: "G-KCRPNX8KMC"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   <nav class="navbar navbar-expand-lg fixed-top custom-menu custom-menu__light">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -900,6 +914,106 @@
           });
       });
     }
+  </script>
+  <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+  <script src="/__/firebase/7.14.4/firebase-messaging.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script>
+    const messaging = firebase.messaging();
+    // [START get_messaging_object]
+    // Add the public key generated from the console here.
+    messaging.usePublicVapidKey('BIfIC5g8ta28tq2kfgTQ8lrS7zF_6axtJ3ocTeAmZ6x4UWF891Gnk1V9otev19FeQF0JaJPjD_L_GYYAIjuDoYw');
+    // [END set_public_vapid_key]
+  messaging.requestPermission().then(function() {
+    console.log('Notification');
+    return messaging.getToken();  
+  }).then(function(token) {
+    console.log(token);
+  }).catch(function(err) {
+    console.log('Error Occured.');
+  });
+
+  // Get Instance ID token. Initially this makes a network call, once retrieved
+  // subsequent calls to getToken will return from cache.
+  messaging.getToken().then((currentToken) => {
+    if (currentToken) {
+      sendTokenToServer(currentToken);
+      updateUIForPushEnabled(currentToken);
+    } else {
+      // Show permission request.
+      console.log('No Instance ID token available. Request permission to generate one.');
+      // Show permission UI.
+      updateUIForPushPermissionRequired();
+      setTokenSentToServer(false);
+    }
+  }).catch((err) => {
+    console.log('An error occurred while retrieving token. ', err);
+    showToken('Error retrieving Instance ID token. ', err);
+    setTokenSentToServer(false);
+  });
+
+  // Callback fired if Instance ID token is updated.
+  messaging.onTokenRefresh(() => {
+    messaging.getToken().then((refreshedToken) => {
+      console.log('Token refreshed.');
+      // Indicate that the new Instance ID token has not yet been sent to the
+      // app server.
+      setTokenSentToServer(false);
+      // Send Instance ID token to app server.
+      sendTokenToServer(refreshedToken);
+      // ...
+    }).catch((err) => {
+      console.log('Unable to retrieve refreshed token ', err);
+      showToken('Unable to retrieve refreshed token ', err);
+    });
+  });
+
+      messaging.onMessage((payload) => {
+      console.log('Message received. ', payload);
+      // [START_EXCLUDE]
+      // Update the UI to include the received message.
+      appendMessage(payload);
+      // [END_EXCLUDE]
+    });
+    // [END receive_message]
+
+    // Add a message to the messages element.
+    function appendMessage(payload) {
+      const messagesElement = document.querySelector('#messages');
+      const dataHeaderELement = document.createElement('h5');
+      const dataElement = document.createElement('pre');
+      dataElement.style = 'overflow-x:hidden;';
+      dataHeaderELement.textContent = 'Received message:';
+      dataElement.textContent = JSON.stringify(payload, null, 2);
+      messagesElement.appendChild(dataHeaderELement);
+      messagesElement.appendChild(dataElement);
+    }
+
+  messaging.onMessage(function(payload) {
+    console.log('onMessage: ',payload);
+  });
+
+    navigator.getInstalledRelatedApps()
+  .then((relatedApps) => {
+    relatedApps.forEach((app) => {
+      console.log(app.id, app.platform, app.url);
+    });
+  });
+
+  self.addEventListener('push', function(event) {
+    console.log('[Service Worker] Push Received.');
+    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+    const title = 'DSC ENSIT';
+    const options = {
+        body: 'Developer Student Clubs est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs.',
+        icon: 'https://dsc-ensit.web.app/images/DSC_ENSIT_Logo-long.png',
+        badge: 'https://dsc-ensit.web.app/images/DSC_ENSIT_Logo-long.png'
+    };
+
+    event.waitUntil(self.registration.showNotification(title, options));
+  });
+
   </script>
   <script src="js/vendors/pace.js"></script>
   <script src="js/vendors/jquery.min.js"></script>

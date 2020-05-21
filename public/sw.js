@@ -16,6 +16,10 @@ limitations under the License.
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
+workbox.setConfig({
+  debug: true,
+});
+
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
 
@@ -24,32 +28,101 @@ if (workbox) {
     suffix: 'v1',
     precache: 'precache',
     runtime: 'run-time',
+    googleAnalytics: 'ga',
   });
 
   workbox.precaching.precacheAndRoute([
   {
-    "url": "images/assets/pwa/browserconfig.xml",
-    "revision": "a493ba0aa0b8ec8068d786d7248bb92c"
+    "url": "css/bootstrap.min.css",
+    "revision": "d69866cbf97f95ab81948406f7d2c5ac"
+  },
+  {
+    "url": "css/error.css",
+    "revision": "7c2550dda85fee8fa4bbdb5530763601"
+  },
+  {
+    "url": "css/fontawesome.v5.2.0.css",
+    "revision": "46ee5b0c32c2b0c3a005e4b7dcf60a7c"
+  },
+  {
+    "url": "css/ionicons.min.css",
+    "revision": "7b9562f0ed331aada08c31163ee522a4"
+  },
+  {
+    "url": "css/owl.carousel.min.css",
+    "revision": "874c664368128b6ab99802737ed00edc"
+  },
+  {
+    "url": "css/responsive.css",
+    "revision": "964ab86cec17408e7ea835cc90c56b0f"
+  },
+  {
+    "url": "css/styles.css",
+    "revision": "bb3598340c82e0bdb5047a6d79b388b6"
+  },
+  {
+    "url": "images/assets/pwa/favicon.ico",
+    "revision": "cbd7238c2706caee140755a3c4042ca3"
+  },
+  {
+    "url": "images/assets/pwa/safari-pinned-tab.svg",
+    "revision": "d2df143b9fe7d4ac17b516ab1d4dd73b"
+  },
+  {
+    "url": "images/favicon.ico",
+    "revision": "cbd7238c2706caee140755a3c4042ca3"
   },
   {
     "url": "index.html",
-    "revision": "c497bff6b025ce912050bafa737ddcf0"
+    "revision": "9388447285273ff492f12c00dc426900"
   },
   {
-    "url": "manifest.json",
-    "revision": "3c6f777fd5fe4a5b1bf02e07cd2e6f56"
+    "url": "js/custom.js",
+    "revision": "047b68706eb0e35e3cddb0fe62911322"
+  },
+  {
+    "url": "js/member.js",
+    "revision": "baec20577e88e3c932d4ff93e9d4d8cc"
+  },
+  {
+    "url": "js/vendors/bootstrap.bundle.min.js",
+    "revision": "b41fe9374205bd087a4d4f0ab5a195be"
+  },
+  {
+    "url": "js/vendors/hammer.js",
+    "revision": "90fa272de2246bcef190bca898737f30"
+  },
+  {
+    "url": "js/vendors/jquery.easing.min.js",
+    "revision": "e2d41e5c8fed838d9014fea53d45ce75"
+  },
+  {
+    "url": "js/vendors/jquery.magnific-popup.min.js",
+    "revision": "b37d7edf99565d3858eaa1ad80df3cff"
+  },
+  {
+    "url": "js/vendors/jquery.min.js",
+    "revision": "2f772fed444d5489079f275bd01e26cc"
+  },
+  {
+    "url": "js/vendors/owl.carousel.min.js",
+    "revision": "47c357c05cb99cedbac2874840319818"
+  },
+  {
+    "url": "js/vendors/pace.js",
+    "revision": "04f3adcdd7438ed782f5e2015161c375"
+  },
+  {
+    "url": "js/vendors/swiper.min.js",
+    "revision": "65ec366943a50289ae2088801c635c85"
   },
   {
     "url": "pages/404.html",
-    "revision": "5a1a5419136b21f54bb1be9c4c112ef1"
+    "revision": "b8606483df4fed3e9fd9937c1071c038"
   },
   {
     "url": "pages/learn.html",
-    "revision": "c32bf5b3a362d0d46cbb150636554d17"
-  },
-  {
-    "url": "sitemap.xml",
-    "revision": "136153c5d6bbf850ae66b93e506b0ee3"
+    "revision": "67261f04b2177a7277553944ceaf2f5e"
   }
 ]);
 
@@ -72,6 +145,7 @@ if (workbox) {
         }),
         new workbox.expiration.Plugin({
           maxAgeSeconds: 60 * 60 * 24 * 365,
+          purgeOnQuotaError: true,
         }),
       ],
       }),
@@ -86,6 +160,7 @@ if (workbox) {
             maxAgeSeconds: 15 * 24 * 60 * 60,
             // Only cache requests.
             maxEntries: 10,
+            purgeOnQuotaError: true,
           }),
         ]
       })
@@ -101,6 +176,7 @@ if (workbox) {
             maxAgeSeconds: 30 * 24 * 60 * 60,
             // Only cache requests.
             maxEntries: 14,
+            purgeOnQuotaError: true,
           }),
         ]
       })
@@ -116,6 +192,7 @@ if (workbox) {
             maxAgeSeconds: 30 * 24 * 60 * 60,
             // Only cache 10 requests.
             maxEntries: 40,
+            purgeOnQuotaError: true,
           }),
         ]
       })
@@ -124,3 +201,15 @@ if (workbox) {
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
+
+const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
+  maxRetentionTime: 24 * 60 // Retry for max of 24 Hours (specified in minutes)
+});
+
+workbox.routing.registerRoute(
+  /\/api\/.*\/*.json/,
+  new workbox.strategies.NetworkOnly({
+    plugins: [bgSyncPlugin]
+  }),
+  'POST'
+);
