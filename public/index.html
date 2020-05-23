@@ -114,7 +114,6 @@
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="dns-prefetch" href="https://docs.google.com" />
   <link href='https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Material+Icons' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" />
@@ -122,27 +121,15 @@
 </head>
 <body class="x-hidden has-sticky-header">
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="/__/firebase/7.14.5/firebase-app.js"></script>
+<script src="/__/firebase/7.14.5/firebase-analytics.js"></script>
+<script src="/__/firebase/7.14.5/firebase-messaging.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAfkXB1I7l5HfcJ4qz2Gj21-myxE2cB4ck",
-    authDomain: "dsc-ensit.firebaseapp.com",
-    databaseURL: "https://dsc-ensit.firebaseio.com",
-    projectId: "dsc-ensit",
-    messagingSenderId: "95530495026",
-    appId: "1:95530495026:web:205da347f31a70b5",
-    measurementId: "G-KCRPNX8KMC"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
   <nav class="navbar navbar-expand-lg fixed-top custom-menu custom-menu__light">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -166,7 +153,7 @@
           <li class="nav-item"><a class="nav-link" href="https://developers.google.com/community/dsc/stories/" target="_blank" rel="noopener" aria-label="DSC Histoires">Histoires</a></li>
         </ul>
         <div class="custom-menu__right">
-          <a href="https://forms.gle/DF23EFa1YARTgKbT8" class="event-btn" target="_blank" rel="noopener" aria-label="Formulaire d'adhésion"><i class="fa fa-users"></i> Devenir membre</a>
+          <a href="https://www.meetup.com/fr-FR/Developer-Student-Club-ENSIT/" class="event-btn" target="_blank" rel="noopener" aria-label="Formulaire d'adhésion"><i class="fa fa-users"></i> Devenir membre</a>
         </div>
       </div>
     </div>
@@ -187,7 +174,7 @@
                 </p>
               </div>
             </div>
-            <a href="https://forms.gle/DF23EFa1YARTgKbT8" class="event-btn" target="_blank" rel="noopener" aria-label="Formulaire d'adhésion"><i class="fa fa-users"></i> Devenir membre</a>
+            <a href="https://www.meetup.com/fr-FR/Developer-Student-Club-ENSIT/" class="event-btn" target="_blank" rel="noopener" aria-label="Formulaire d'adhésion"><i class="fa fa-users"></i> Devenir membre</a>
             <div id="memberSubmit" class="h3 text-center hidden"></div>
             <div id="loader">
               <img data-src="images/loading.gif" height="30">
@@ -757,7 +744,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noopener" aria-label="page github">
+                <a href="https://github.com/dscensit/website" target="_blank" rel="noopener" aria-label="page github">
                   <i class="fab fa-github"></i>
                 </a>
               </li>
@@ -820,10 +807,10 @@
                 <h4 class="footer-widget__title">Contribuer</h4>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://github.com/DSCEksu/dsceksu/issues/new?template=documentation-bug.md" target="_blank" rel="noreferrer" aria-label="Déposer un bug">Déposer un bug</a>
+                    <a href="https://github.com/dscensit/website/issues/new?template=documentation-bug.md" target="_blank" rel="noreferrer" aria-label="Déposer un bug">Déposer un bug</a>
                   </li>
                   <li>
-                    <a href="https://github.com/DSCEksu/dsceksu" target="_blank" rel="noreferrer" aria-label="Voir la source">Voir la source</a>
+                    <a href="https://github.com/dscensit/website" target="_blank" rel="noreferrer" aria-label="Voir la source">Voir la source</a>
                   </li>
                   <li>
                     <a href="javascript:;" onclick="share('DSC ENSIT', 'https://dsc-ensit.web.app', 'En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement de travaille harmonieux entre pairs et développent des solutions pour les entreprises locales et leur communauté.')"><i class="fa fa-share"></i> Partager</a>
@@ -905,7 +892,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('/firebase-messaging-sw.js')
           .then(registration => {
             console.log(`Service Worker registered! Scope: ${registration.scope}`);
           })
@@ -915,104 +902,143 @@
       });
     }
   </script>
-  <script src="/__/firebase/7.14.4/firebase-app.js"></script>
-  <script src="/__/firebase/7.14.4/firebase-messaging.js"></script>
-  <script src="/__/firebase/init.js"></script>
+
   <script>
-    const messaging = firebase.messaging();
+  const messaging = firebase.messaging();
     // [START get_messaging_object]
     // Add the public key generated from the console here.
     messaging.usePublicVapidKey('BIfIC5g8ta28tq2kfgTQ8lrS7zF_6axtJ3ocTeAmZ6x4UWF891Gnk1V9otev19FeQF0JaJPjD_L_GYYAIjuDoYw');
     // [END set_public_vapid_key]
-  messaging.requestPermission().then(function() {
-    console.log('Notification');
-    return messaging.getToken();  
-  }).then(function(token) {
-    console.log(token);
-  }).catch(function(err) {
-    console.log('Error Occured.');
-  });
+    messaging.requestPermission().then(function() {
+            console.log('Notification');
+            return messaging.getToken();
+        }).then(function(token) {
+            console.log(token);
+        }).catch(function(err) {
+            console.log('Error Occured.');
+        });
 
-  // Get Instance ID token. Initially this makes a network call, once retrieved
-  // subsequent calls to getToken will return from cache.
-  messaging.getToken().then((currentToken) => {
-    if (currentToken) {
-      sendTokenToServer(currentToken);
-      updateUIForPushEnabled(currentToken);
-    } else {
-      // Show permission request.
-      console.log('No Instance ID token available. Request permission to generate one.');
-      // Show permission UI.
-      updateUIForPushPermissionRequired();
-      setTokenSentToServer(false);
-    }
-  }).catch((err) => {
-    console.log('An error occurred while retrieving token. ', err);
-    showToken('Error retrieving Instance ID token. ', err);
-    setTokenSentToServer(false);
-  });
+        function isTokenSentToServer() {
+          return window.localStorage.getItem('sentToServer') === '1';
+        }
 
-  // Callback fired if Instance ID token is updated.
-  messaging.onTokenRefresh(() => {
-    messaging.getToken().then((refreshedToken) => {
-      console.log('Token refreshed.');
-      // Indicate that the new Instance ID token has not yet been sent to the
-      // app server.
-      setTokenSentToServer(false);
-      // Send Instance ID token to app server.
-      sendTokenToServer(refreshedToken);
-      // ...
-    }).catch((err) => {
-      console.log('Unable to retrieve refreshed token ', err);
-      showToken('Unable to retrieve refreshed token ', err);
-    });
-  });
+        function setTokenSentToServer(sent) {
+          window.localStorage.setItem('sentToServer', sent ? '1' : '0');
+  }
+        // Get Instance ID token. Initially this makes a network call, once retrieved
+        // subsequent calls to getToken will return from cache.
+        messaging.getToken().then((currentToken) => {
+            if (currentToken) {
+                sendTokenToServer(currentToken);
+                updateUIForPushEnabled(currentToken);
+            } else {
+                // Show permission request.
+                console.log('No Instance ID token available. Request permission to generate one.');
+                // Show permission UI.
+                updateUIForPushPermissionRequired();
+                setTokenSentToServer(false);
+            }
+        }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+            //showToken('Error retrieving Instance ID token. ', err);
+            setTokenSentToServer(false);
+        });
 
-      messaging.onMessage((payload) => {
-      console.log('Message received. ', payload);
-      // [START_EXCLUDE]
-      // Update the UI to include the received message.
-      appendMessage(payload);
-      // [END_EXCLUDE]
-    });
-    // [END receive_message]
+        // Callback fired if Instance ID token is updated.
+        messaging.onTokenRefresh(() => {
+            messaging.getToken().then((refreshedToken) => {
+                console.log('Token refreshed.');
+                // Indicate that the new Instance ID token has not yet been sent to the
+                // app server.
+                setTokenSentToServer(false);
+                // Send Instance ID token to app server.
+                sendTokenToServer(refreshedToken);
+                // ...
+            }).catch((err) => {
+                console.log('Unable to retrieve refreshed token ', err);
+                showToken('Unable to retrieve refreshed token ', err);
+            });
+        });
 
-    // Add a message to the messages element.
-    function appendMessage(payload) {
-      const messagesElement = document.querySelector('#messages');
-      const dataHeaderELement = document.createElement('h5');
-      const dataElement = document.createElement('pre');
-      dataElement.style = 'overflow-x:hidden;';
-      dataHeaderELement.textContent = 'Received message:';
-      dataElement.textContent = JSON.stringify(payload, null, 2);
-      messagesElement.appendChild(dataHeaderELement);
-      messagesElement.appendChild(dataElement);
-    }
+        messaging.onMessage((payload) => {
+            console.log('Message received. ', payload);
+            // [START_EXCLUDE]
+            // Update the UI to include the received message.
+            appendMessage(payload);
+            // [END_EXCLUDE]
+        });
+        // [END receive_message]
 
-  messaging.onMessage(function(payload) {
-    console.log('onMessage: ',payload);
-  });
 
-    navigator.getInstalledRelatedApps()
-  .then((relatedApps) => {
-    relatedApps.forEach((app) => {
-      console.log(app.id, app.platform, app.url);
-    });
-  });
+        function requestPermission() {
+            console.log('Requesting permission...');
+            // [START request_permission]
+            Notification.requestPermission().then((permission) => {
+                if (permission === 'granted') {
+                    console.log('Notification permission granted.');
+                    // TODO(developer): Retrieve an Instance ID token for use with FCM.
+                    // [START_EXCLUDE]
+                    // In many cases once an app has been granted notification permission,
+                    // it should update its UI reflecting this.
+                    resetUI();
+                    // [END_EXCLUDE]
+                } else {
+                    console.log('Unable to get permission to notify.');
+                }
+            });
+            // [END request_permission]
+        }
 
-  self.addEventListener('push', function(event) {
-    console.log('[Service Worker] Push Received.');
-    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+        function deleteToken() {
+        // Delete Instance ID token.
+        // [START delete_token]
+        messaging.getToken().then((currentToken) => {
+          messaging.deleteToken(currentToken).then(() => {
+            console.log('Token deleted.');
+            setTokenSentToServer(false);
+            // [START_EXCLUDE]
+            // Once token is deleted update UI.
+            resetUI();
+            // [END_EXCLUDE]
+          }).catch((err) => {
+            console.log('Unable to delete token. ', err);
+          });
+          // [END delete_token]
+        }).catch((err) => {
+          console.log('Error retrieving Instance ID token. ', err);
+          showToken('Error retrieving Instance ID token. ', err);
+        });
 
-    const title = 'DSC ENSIT';
-    const options = {
-        body: 'Developer Student Clubs est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs.',
-        icon: 'https://dsc-ensit.web.app/images/DSC_ENSIT_Logo-long.png',
-        badge: 'https://dsc-ensit.web.app/images/DSC_ENSIT_Logo-long.png'
-    };
+      }
 
-    event.waitUntil(self.registration.showNotification(title, options));
-  });
+        // Add a message to the messages element.
+        function appendMessage(payload) {
+            const messagesElement = document.querySelector('#messages');
+            const dataHeaderELement = document.createElement('h5');
+            const dataElement = document.createElement('pre');
+            dataElement.style = 'overflow-x:hidden;';
+            dataHeaderELement.textContent = 'Received message:';
+            dataElement.textContent = JSON.stringify(payload, null, 2);
+            messagesElement.appendChild(dataHeaderELement);
+            messagesElement.appendChild(dataElement);
+        }
+
+        messaging.onMessage(function(payload) {
+            console.log('onMessage: ', payload);
+        });
+
+        function updateUIForPushEnabled(currentToken) {
+            showHideDiv(tokenDivId, true);
+            showHideDiv(permissionDivId, false);
+            showToken(currentToken);
+        }
+
+        function updateUIForPushPermissionRequired() {
+            showHideDiv(tokenDivId, false);
+            showHideDiv(permissionDivId, true);
+        }
+
+    </script>
 
   </script>
   <script src="js/vendors/pace.js"></script>

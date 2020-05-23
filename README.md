@@ -3,7 +3,7 @@
 # Website of DSC ENSIT
 This is the official website of DSC ENSIT realize with HTML, CSS, JavaScript
 
-[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/dscensit/website.git)
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/EZFRICA/dscensitproject.git)
 
 
 ## PWA
@@ -20,5 +20,3 @@ docker pull kiasso/dscensit
 ## Firebase 
 
 We used firebase for the deployment of the website which is available at this address [dsc-ensit.web.app](https://dsc-ensit.web.app/)
-### It was made on the basis of the Vibranium project
-[https://github.com/kelvinkamau/Vibranium](https://github.com/kelvinkamau/Vibranium)

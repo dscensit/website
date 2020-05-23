@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <link rel="manifest" href="../manifest.webmanifest"/>
-  <link rel="canonical" href="https://dsc-ensit.web.app/learn.html"/>
-  <meta name="theme-color" content="#f1f1f1"/>
+  <meta name="theme-color" content="#f6f6f6"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
   
   <title>DSC - ENSIT</title>
   
@@ -18,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="DSC ENSIT | Developer Student Club ENSIT" />
   <meta property="og:description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT." />
-  <meta property="og:url" content="https://dsc-ensit.web.app/learn.html" />
+  <meta property="og:url" content="https://dsc-ensit.web.app/workshops.html" />
   <meta property="og:site_name" content="DSC ENSIT" />
   <meta property="og:image" content="https://dsc-ensit.web.app/images/dsc.png" />
   <meta property="og:image:secure_url" content="https://dsc-ensit.web.app/images/dsc.png" />
@@ -26,7 +25,7 @@
   <meta property="og:image:height" content="567" />
     <!-- Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dsc-ensit.web.app/learn.html" />
+  <meta property="og:url" content="https://dsc-ensit.web.app/workshops.html" />
   <meta property="og:title" content="DSC ENSIT" />
   <meta property="og:description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT." />
   <meta property="og:image" content="https://dsc-ensit.web.app/images/dsc.png" />
@@ -34,14 +33,14 @@
   <meta property="og:image:alt" content="DSC Icon" />
     <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://dsc-ensit.web.app/learn.html" />
+  <meta property="twitter:url" content="https://dsc-ensit.web.app/workshops.html" />
   <meta name="twitter:site" content="@DscEnsit" />
   <meta name="twitter:creator" content="@EzekiasBokove" />
   <meta name="twitter:title" content="DSC ENSIT | Developer Student Club ENSIT" />
   <meta name="twitter:description" content="Developer Student Clubs (DSC) est un programme présenté par Google Developers. Les DSC sont des groupes communautaires universitaires pour les étudiants de tous les programmes souhaitant être développeurs. En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement d’apprentissage entre pairs et développent des solutions pour les entreprises locales et leur communauté. Développement web et mobile, le Cloud, AI/ML et l'IoT." />
   <meta name="twitter:image:src" content="https://dsc-ensit.web.app/images/dsc.png" />
   <meta name="twitter:image:alt" content="DSC Icon" />
-  
+
   <meta name="google-site-verification" content="BEDcsLZQlqB3FkjmyyoExR__hnNqwv8UVFpjlB3ia-I" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147241121-1"></script>
@@ -68,7 +67,31 @@
         "addressCountry": "Côte d'Ivoire"
       }
     }
-    </script>
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abidjan",
+        "addressCountry": "Côte d'Ivoire",
+        "addressRegion": "Région des Lagunes",
+        "streetAddress": "Cocody, Abidjan"
+      },
+      "email": "ricardobokove@gmail.com",
+      "image": "https://dsc-ensit.web.app/images/assets/team/bokove_ezekias.jpg",
+      "jobTitle": "Cloud Engineering with GCP",
+      "name": "BOKOVE Ezekias",
+      "description": "I am GDG Bassam co-lead, DSC ENSIT Lead, Google Cloud Study Jams organizer and trainer. I have many certificates of specializations: Cloud Engineering with GCP, Architecting with Google Compute Engine and architecture with Google Kubernetes Engine on coursera. Being pationed by technology, my goal is to share my knowledge and contribute to improving the living conditions of the population through new technologies. My favorite technology is cloud computing.",
+      "telephone": "+225 41 45 94 26",
+      "url": [
+        "https://www.linkedin.com/in/ez%C3%A9kias-bokove/",
+        "https://dsc-ensit.web.app/"
+      ]
+    }
+  </script>
+  <link rel="canonical" href="https://dsc-ensit.web.app/workshops.html"/>
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="../images/favicon.png" type="image/png" />
 
@@ -97,68 +120,172 @@
   <link rel="stylesheet" href="../css/responsive.css" />
 </head>
 <body class="x-hidden has-sticky-header">
-  <nav class="navbar navbar-expand-lg fixed-top custom-menu custom-menu__light">
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-menu custom-menu__light">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/DSC_ENSIT_Logo-long.png" height="40" alt="DSC icon">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu-icon__circle"></span>
+            <span class="menu-icon">
+              <span class="menu-icon__bar"></span>
+              <span class="menu-icon__bar"></span>
+              <span class="menu-icon__bar"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item active"><a class="nav-link" href="../index.html">Accueil <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a href="https://developers.google.com/community/dsc/stories/" class="nav-link" target="_blank" rel="noreferrer">Histoires</a></li>
+            </ul>
+            <div class="custom-menu__right">
+              <a href="https://www.meetup.com/fr-FR/Developer-Student-Club-ENSIT/" class="event-btn" target="_blank" rel="noopener"><i class="fa fa-users"></i> Devenir membre</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+  <section id="workshops" class="section-spacer workshops-section bg-very__gray">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../images/DSC_ENSIT_Logo-long.png" height="40" alt="DSC icon">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="menu-icon__circle"></span>
-        <span class="menu-icon">
-          <span class="menu-icon__bar"></span>
-          <span class="menu-icon__bar"></span>
-          <span class="menu-icon__bar"></span>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-lg-auto">
-          <li class="nav-item active"><a class="nav-link" href="../index.html">Accueil <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a href="https://developers.google.com/community/dsc/stories/" class="nav-link" target="_blank" rel="noreferrer">Histoires</a></li>
+      <header class="section-header text-center">
+        <h2 class="section-title">Événements & Ateliers</h2>
+        <p class="section-subtitle">Venez apprendre, partager et communiquer avec nous en personne.</p>
+      </header>
+      <div class="workshops-type-switch">
+        <ul class="nav nav-pills justify-content-center js-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#upcoming">Evènements à venir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#past">Événements passés</a>
+          </li>
         </ul>
-        <div class="custom-menu__right">
-          <a href="https://www.meetup.com/fr-FR/Developer-Student-Club-ENSIT/" class="event-btn" target="_blank" rel="noopener"><i class="fa fa-users"></i> Devenir membre</a>
-        </div>
       </div>
-    </div>
-  </nav>
-  <section id="web" class="section-spacer">
-    <header class="section-header text-center">
-      <h2 class="section-title">Partager des expériences et des ressources gratuites</h2>
-    </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <div class="card course-card" style="width: 22rem;">
-            <img class="card-img-top" src="../images/assets/courses/intro-js.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="tagging beginner float-right">Débutant</p>
-              <h5 class="card-title">Introduction à JavaScript</h5>
-              <p class="card-text">Apprenez les bases de la syntaxe Javascript. Explorez les bases de JavaScript en apprenant à définir des variables et à utiliser des types de données... En anglais</p>
-              <a href="https://www.udacity.com/course/intro-to-javascript--ud803" class="button float-right" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+      <div class="tab-content">
+        <div class="tab-pane active" id="upcoming" role="tabpanel" aria-labelledby="upcoming">
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <div class="card event-card">
+                <img class="card-img-top" data-src="../images/assets/events/DSC_ENSIT_Sessions_d'information.png" alt="DSC ENSIT Sessions d'information">
+                <div class="card-body">
+                  <p class="tagging expert float-right">Important</p>
+                  <h5 class="card-title">Sessions d'information</h5>
+                  <table>
+                    <tr>
+                      <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                      <td>Sam<sup>11</sup> Septembre 2019</td>
+                    </tr>
+                    <tr>
+                      <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
+                      <td>Hangouts</td>
+                    </tr>
+                    <tr>
+                      <td class="text-green"><i class="far fa-clock"></i></td>
+                      <td>17H30</td>
+                    </tr>
+                  </table>
+                  <a href="https://forms.gle/DF23EFa1YARTgKbT8" class="button float-right" target="_blank" rel="noopener" aria-label="Assister">Assister</a>
+                </div>
+              </div>
             </div>
+            <div class="col-md-4 col-12">
+              <div class="card event-card">
+                <img class="card-img-top" data-src="../images/assets/events/DevFestCIV19.jpg" alt="DEVFEST CI 19 GDG Côte d'Ivoire">
+                <div class="card-body">
+                  <p class="tagging intermediate float-right">Important</p>
+                  <h5 class="card-title">DEVFEST CI 19</h5>
+                  <table>
+                    <tr>
+                      <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                      <td>Ven<sup>11</sup> Octobre 2019</td>
+                    </tr>
+                    <tr>
+                      <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
+                      <td>Inconnu</td>
+                    </tr>
+                    <tr>
+                      <td class="text-green"><i class="far fa-clock"></i></td>
+                      <td>09h à 17h</td>
+                    </tr>
+                  </table>
+                  <a href="https://www.meetup.com/fr-FR/GDG-Cocody/events/262670508/" class="button float-right" target="_blank" rel="noopener" aria-label="Inscription">Assister</a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-4 col-12">
+              <div class="card event-card">
+                <img class="card-img-top" data-src="../images/assets/events/rpj.png" alt="Event three poster">
+                <div class="card-body">
+                  <p class="tagging beginner float-right">Beginner</p>
+                  <h5 class="card-title">Raspberry Pi Jam</h5>
+                  <table>
+                    <tr>
+                      <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
+                      <td>22<sup>nd</sup> May 2019</td>
+                    </tr>
+                    <tr>
+                      <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
+                      <td>LH 20, Main Campus</td>
+                    </tr>
+                    <tr>
+                      <td class="text-green"><i class="far fa-clock"></i></td>
+                      <td>1800hrs - 1930hrs</td>
+                    </tr>
+                  </table>
+                  <a href="https://www.meetup.com/GDG-Kisii/events/258212444/" class="button float-right">Attend</a>
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
-        <div class="col-md-4 col-12">
-          <div class="card course-card" style="width: 22rem;">
-            <img class="card-img-top" src="../images/assets/courses/kotlin.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="tagging intermediate float-right">Intermediaire</p>
-              <h5 class="card-title">Kotlin pour les développeurs Android</h5>
-              <p class="card-text">Prenez une application de bloc-notes Android et convertissez-la de Java en Kotlin, en apprenant les fonctionnalités clés du langage de programmation Kotlin... En anglais</p>
-              <a href="https://classroom.udacity.com/courses/ud888" class="button float-right" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+        <div class="tab-pane" id="past" role="tabpanel" aria-labelledby="past">
+          <section id="hi" class="section-spacer bg-very__gray">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-sm-6">
+                  <div class="feature-list-image">
+                    <img class="card-img-top" data-src="../images/assets/events/ioextended19_civ.jpg" alt="ioextended19 GDG Cocody & GDG Bassam">
+                  </div>
+                </div>
+                <div class="col-sm-5 ml-auto">
+                  <div class="feature-list-wrapper">
+                    <div class="content-header">
+                      <h2 class="content-title">ioextended19 GDG Cocody & GDG Bassam</h2>
+                      <hr>
+                      <h6>HEURE : 09:00 à 17:00</h6>
+                      <h6>LIEU : SIMPLON - Université de Cocody</h6>
+                      <p>Nous avons appris comment déployer une application severless sur Google Cloud Platform, comment utiliser TensorFlow 2.0, concevoir une application mobile avec Kotlin et Flutter.</p>
+                    </div>
+                    <a href="https://www.meetup.com/fr-FR/GDG-Cocody/events/260246058/" class="past-event" target="_blank" rel="noopener" aria-label="PHOTOS Events">PHOTOS&nbsp;&nbsp;<i class="fas fa-camera"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12">
-          <div class="card course-card" style="width: 22rem;">
-            <img class="card-img-top" src="../images/assets/courses/best-prac.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="tagging expert float-right">Expert</p>
-              <h5 class="card-title">Meilleures pratiques JavaScript</h5>
-              <p class="card-text"> This course is designed to take your existing JavaScript knowledge and teach you how to leverage patterns and practices to take... En anglais</p>
-              <a href="https://app.pluralsight.com/player?course=javascript-best-practices&author=jonathan-mills&name=javascript-best-practices" class="button float-right" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+          </section>
+          <section class="section-spacer">
+            <div class="container">
+              <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
+                <div class="col-sm-5 mr-auto">
+                  <div class="feature-list-wrapper">
+                    <div class="content-header">
+                      <h2 class="content-title">DSC SSA Leads Summit</h2>
+                      <hr>
+                      <h6>DATE : Me<sup>25</sup> Juillet - Sa<sup>28</sup>Juillet 2018</h6>
+                      <h6>LIEU : Lagos, Nigeria.</h6>
+                      <p>L'un de nos principaux organisateurs a eu le privilège de représenter la communauté lors d'un sommet organisé par Google Nigeria, où il a également parlé de la fixation d'objectifs.</p>
+                    </div>
+                    <a href="https://developers.google.com/community/dsc/stories/" class="past-event" target="_blank" rel="noopener" aria-label="DSC Histoires">Histoires&nbsp;&nbsp;<i class="fas fa-camera"></i></a>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="feature-list-image">
+                    <iframe width="500" height="274" data-urllink="https://www.youtube.com/embed/AAin71VkbzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
@@ -170,7 +297,7 @@
         <div class="col-md-4 col-12">
           <div class="footer-widget first-of-footer-widget">
             <img data-src="../images/DSC_ENSIT_Logo.png" class="logo-sm mb-10 mt-0" alt="DSC ENSIT footer logo">
-            <p class="mt-0">&copy; <script>document.write(new Date().getFullYear())</script> | Tous droits réservés.</p>
+            <p class="mt-0">&copy; 2019 | Tous droits réservés.</p>
             <span>N'hésitez pas à nous envoyer un email: </span>
             <a href="mailto:dscensit@gmail.com">dscensit@gmail.com</a>
             <ul class="social-list__inline mt-10">
@@ -199,19 +326,19 @@
                 <h4 class="footer-widget__title">Programmes</h4>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://www.womentechmakers.com/" target="_blank" rel="noreferrer">Women Techmakers</a>
+                    <a href="https://www.womentechmakers.com/" target="_blank" rel="noreferrer" aria-label="Women Techmakers">Women Techmakers</a>
                   </li>
                   <li>
-                    <a href="https://developers.google.com/experts/" target="_blank" rel="noreferrer">Google Developer Experts</a>
+                    <a href="https://developers.google.com/experts/" target="_blank" rel="noreferrer" aria-label="Google Developer Experts">Google Developer Experts</a>
                   </li>
                   <li>
-                    <a href="https://developers.google.com/programs/community/" target="_blank" rel="noreferrer">Google Developer Groups</a>
+                    <a href="https://developers.google.com/programs/community/" target="_blank" rel="noreferrer" aria-label="Google Developer Groups">Google Developer Groups</a>
                   </li>
                   <li>
-                    <a href="https://developers.google.com/community/launchpad/" target="_blank" rel="noreferrer">Launchpad</a>
+                    <a href="https://developers.google.com/community/launchpad/" target="_blank" rel="noreferrer" aria-label="Launchpad">Launchpad</a>
                   </li>
                   <li>
-                    <a href="https://developers.google.com/community/dsc/" target="_blank" rel="noreferrer">Developer Student Clubs</a>
+                    <a href="https://developers.google.com/community/dsc/" target="_blank" rel="noreferrer" aria-label="Developer Student Clubs">Developer Student Clubs</a>
                   </li>
                 </ul>
               </div>
@@ -221,19 +348,19 @@
                 <h4 class="footer-widget__title">Développeurs</h4>
                   <ul class="list-unstyled">
                     <li>
-                      <a href="https://developer.chrome.com/home" target="_blank" rel="noreferrer">Chrome</a>
+                      <a href="https://developer.chrome.com/home" target="_blank" rel="noreferrer" aria-label="Chrome">Chrome</a>
                     </li>
                     <li>
-                      <a href="https://developer.android.com/index.html" target="_blank" rel="noreferrer">Android</a>
+                      <a href="https://developer.android.com/index.html" target="_blank" rel="noreferrer" aria-label="Android">Android</a>
                     </li>
                     <li>
-                      <a href="https://firebase.google.com/" target="_blank" rel="noreferrer">Firebase</a>
+                      <a href="https://firebase.google.com/" target="_blank" rel="noreferrer" aria-label="Firebase">Firebase</a>
                     </li>
                     <li>
-                      <a href="https://cloud.google.com/" target="_blank" rel="noreferrer">Google Cloud Platform</a>
+                      <a href="https://cloud.google.com/" target="_blank" rel="noreferrer" aria-label="Google Cloud Platform">Google Cloud Platform</a>
                     </li>
                     <li>
-                      <a href="https://developers.google.com/actions/" target="_blank" rel="noreferrer">Actions on Google</a>
+                      <a href="https://developers.google.com/actions/" target="_blank" rel="noreferrer" aria-label="Actions on Google">Actions on Google</a>
                     </li>
                 </ul>
               </div>
@@ -243,10 +370,10 @@
                 <h4 class="footer-widget__title">Contribuer</h4>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://github.com/dscensit/website/issues/new?template=documentation-bug.md" target="_blank" rel="noreferrer">Déposer un bug</a>
+                    <a href="https://github.com/dscensit/website/issues/new?template=documentation-bug.md" target="_blank" rel="noreferrer" aria-label="Déposer un bug">Déposer un bug</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dscensit/website" target="_blank" rel="noreferrer">Voir la source</a>
+                    <a href="https://github.com/dscensit/website" target="_blank" rel="noreferrer" aria-label="Voir la source">Voir la source</a>
                   </li>
                   <li>
                     <a href="javascript:;" onclick="share('DSC ENSIT', 'https://dsc-ensit.web.app', 'En rejoignant le DSC ENSIT, les étudiants approfondissent leurs connaissances dans un environnement de travaille harmonieux entre pairs et développent des solutions pour les entreprises locales et leur communauté.')"><i class="fa fa-share"></i> Partager</a>
@@ -259,8 +386,8 @@
       </div>
     </div>
   </footer>
-  <a href="#" id="scroll" style="display: none;" aria-label="Allez en haut"><i class="fas fa-angle-up"></i></a>
-  
+  <a href="#" id="scroll" style="display: none;"><i class="fas fa-angle-up"></i></a>
+
   <script>
     ;function imageIntersectionObserverCallback(imageEntries, observer) {
       imageEntries.forEach(imgEntry => {
@@ -278,6 +405,20 @@
     })
   </script>
   <script>
+    function iframeObserverCallback(iframeEntries, observer) {
+      iframeEntries.forEach(iframe => {
+        if (iframe.isIntersecting && window.matchMedia('(min-width: 450px)').matches) {
+          iframe.target.setAttribute('src', iframe.target.dataset.urllink);
+          observer.unobserve(iframe.target);
+        }
+      })
+    }
+    const iframeObserver = new IntersectionObserver(iframeObserverCallback, { rootMargin: '30px 0px' });
+    iframeObserver.POLL_INTERVAL = 200;
+    iframeObserver.USE_MUTATION_OBSERVER = false;
+    document.querySelectorAll('iframe[data-urllink]').forEach(img => {
+      iframeObserver.observe(img);
+    });
 
     async function share(title, url, text) {
       if (window.Windows) {
@@ -311,25 +452,13 @@
       }
     }
   </script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js')
-          .then(registration => {
-            console.log(`Service Worker registered! Scope: ${registration.scope}`);
-          })
-          .catch(err => {
-            console.log(`Service Worker registration failed: ${err}`);
-          });
-      });
-    }
-  </script>
   <script src="../js/vendors/pace.js"></script>
   <script src="../js/vendors/jquery.min.js"></script>
+  <script src="../js/vendors/owl.carousel.min.js"></script>  
   <script src="../js/vendors/bootstrap.bundle.min.js"></script>
   <script src="../js/vendors/jquery.magnific-popup.min.js"></script>
   <script src="../js/vendors/jquery.easing.min.js"></script>
   <script src="../js/vendors/swiper.min.js"></script>
-  <script src="../js/custom.js"></script>
+  <script src="../js/member.js"></script>
 </body>
 </html>

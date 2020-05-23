@@ -1,6 +1,7 @@
 {
   "name": "DSC ENSIT",
   "short_name": "DSC ENSIT",
+  "gcm_sender_id": "95530495026",
   "theme_color": "#f6f6f6",
   "background_color": "#f6f6f6",
   "display": "standalone",
@@ -19,21 +20,21 @@
   ],
   "shortcuts": [
     {
-      "name": "Nos Technologies",
-      "short_name": "Technologies",
+      "name": "Opportunités & Technologies",
+      "short_name": "Opportunités",
       "description": "Des technologies qui nous passionnent.",
-      "url": "/#technologies?source=pwa",
+      "url": "/pages/technologies.html?source=pwa",
       "icons": [{ "src": "/images/assets/pwa/google_developers_icon.png", "sizes": "192x192" }]
     },
     {
       "name": "Événements & Ateliers",
       "short_name": "Événements",
       "description": "Venez apprendre, partager et communiquer avec nous en personne.",
-      "url": "/#workshops?source=pwa",
+      "url": "/pages/workshops.html?source=pwa",
       "icons": [{ "src": "/images/assets/pwa/google_developers-icon.png", "sizes": "192x192" }]
     },
     {
-      "name": "Cours ratuit",
+      "name": "Cours gratuit",
       "short_name": "Formations",
       "description": "Partager des expériences et des ressources gratuites.",
       "url": "/pages/learn.html?source=pwa",
@@ -60,5 +61,5 @@
         "type": "image/png"
     }
 ],
-  "start_url": "/index.html?source=pwa"
+  "start_url": "/?source=pwa"
 }
